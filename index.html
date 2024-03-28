@@ -12,24 +12,33 @@
 
     </ul>
     <script>
-      var links = [
-        {text:"Link 1", url: "https://ch-sz-geo.github.io/A000/"},
-        {text:"Link 1", url: "https://ch-sz-geo.github.io/A000/"},
-        {text:"Link 1", url: "https://ch-sz-geo.github.io/A000/"}
-      ];
 
-      var ulElement = document.getElementById('linkList');
+      function fetchJSON(url, callback){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+          if(xhr.readyState === 4 && xhr.status === 200){
+            var data = JSON.parse(xhr.responseText);
+            callback(data);
+          }
+        };
+        xhr.send();
+      }
 
-      links.forEach(function(link){
-        var liElement = document.createElement("li");
-        var aElement = document.createElement("a");
-        aElement.textContent=link.text;
-        aElement.href=link.url;
-        liElement.appendChild(aElement);
-        ulElement.appendChild(liElement);
-      });
+      function createListItems(links){
+        var ulElement = document.getElementById('linkList');
+
+        links.forEach(function(link){
+          var liElement = document.createElement("li");
+          var aElement = document.createElement("a");
+          aElement.textContent=link.text;
+          aElement.href=link.url;
+          liElement.appendChild(aElement);
+          ulElement.appendChild(liElement);
+        });
+      }
+      
+      fetchJSON('linkListDataModel.json', createListeItems);
 
     </script>
   </body>
 </html>
-https://ch-sz-geo.github.io/A000/
