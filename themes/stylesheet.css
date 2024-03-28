@@ -10,6 +10,16 @@ body {
 
 header {
 	height: 128px;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #D9D9D9;
+	padding-bottom: 24px;
+}
+
+.img-logo {
+	position: absolute;
+	right: 40px;
+	top: 24px;
 }
 
 summary.title {
