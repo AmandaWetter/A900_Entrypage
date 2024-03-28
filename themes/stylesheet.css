@@ -82,7 +82,8 @@ h1, h1 a.link {
 	font-weight: bold;
 	font-size: 36pt;
 	line-height: 41pt;
-	color: #000000 !important;
+	/*color: #000000 !important;*/
+	color: red;
 }
 
 h2, h2 a.link {
