@@ -7,14 +7,36 @@
   </head>
   <body>
     <header>
-      <h3>Amt für Geoinformation</h3>
-      <img class="img-logo" src="./themes/logo_kt_sz_rgb.jpg" alt="Logo Kanton Schwyz"/> 
+		<table id="header-table">
+			<tr>
+				<td colspan="2">
+					<h6 id="header-departement">Umweltdepartement</h6>	
+				</td>
+				<td id="header-logo" rowspan="2">
+					<img class="img-logo" src="./themes/logo_kt_sz_rgb.jpg" alt="Logo Kanton Schwyz"/> 
+				</td>
+			</tr>
+			<tr id="second-row">
+				<td id="header-amt">
+					<h3>Amt für Geoinformation</h3>
+				</td>
+				<td id="header-address">
+					Bahnhofstrasse 16<br/>
+					Postfach 1213<br/>
+					6431 Schwyz<br/>
+					Telefon 041 819 25 41<br/>
+				</td>
+				
+			</tr>
+			
+		</table>
     </header>
-    <h1>Datenmodell Übersicht</h1>
-    <h2 id="listTitle">My List of Links</h2>
-    <ul id="linkList">
+    <div id="link-list-body">
+		<h1>Datenmodell Übersicht</h1>
+		<ul id="linkList">
 
-    </ul>
+		</ul>
+	</div>
     <script>
       function renderJSON(links){
         var ulElement = document.getElementById('linkList');
