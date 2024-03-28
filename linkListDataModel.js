@@ -1,5 +1,5 @@
-[
+renderJSON({"links":[
     {"text":"Link 1", "url": "https://ch-sz-geo.github.io/A000/"},
     {"text":"Link 1", "url": "https://ch-sz-geo.github.io/A000/"},
     {"text":"Link 1", "url": "https://ch-sz-geo.github.io/A000/"}
-]
+]});

@@ -12,22 +12,9 @@
 
     </ul>
     <script>
-
-      function fetchJSON(url, callback){
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function(){
-          if(xhr.readyState === 4 && xhr.status === 200){
-            var data = JSON.parse(xhr.responseText);
-            callback(data);
-          }
-        };
-        xhr.send();
-      }
-
-      function createListItems(links){
+      function renderJSON(links){
         var ulElement = document.getElementById('linkList');
-
-        links.forEach(function(link){
+        links["links"].forEach(function (link){
           var liElement = document.createElement("li");
           var aElement = document.createElement("a");
           aElement.textContent=link.text;
@@ -36,9 +23,7 @@
           ulElement.appendChild(liElement);
         });
       }
-      
-      fetchJSON('linkListDataModel.json', createListItems);
-
     </script>
+	<script src='./linkListDataModel.js'></script>
   </body>
 </html>
